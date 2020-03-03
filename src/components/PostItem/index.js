@@ -2,9 +2,9 @@ import React from 'react';
 
 function PostMenu({ author, date }) {
   return (
-    <div>
-      <img src={author.avatar} />
-      <div >
+    <div className="post-menu">
+      <img className="avatar" src={author.avatar} />
+      <div className="details">
         <span>{author.name}</span>
         <span>{date}</span>
       </div>
@@ -14,11 +14,11 @@ function PostMenu({ author, date }) {
 
 function PostComments({ comments }) {
   return (
-    <div>
-      <div />
+    <div className="post-comments">
+      <div className="divider" />
       {comments.map(comment => (
-        <div key={comment.id} >
-          <img src={comment.author.avatar} />
+        <div key={comment.id} className="comment">
+          <img className="avatar" src={comment.author.avatar} />
           <p>
             <span>{comment.author.name}</span>
             {comment.content}
@@ -31,13 +31,12 @@ function PostComments({ comments }) {
 
 function PostItem({ author, date, content, comments }) {
   return (
-    <div>
+    <div className="post">
       <PostMenu author={author} date={date} />
-      <p>{content}</p>
+      <p className="post-content">{content}</p>
       <PostComments comments={comments} />
     </div>
   );
 }
-
 
 export default PostItem;

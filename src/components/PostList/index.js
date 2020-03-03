@@ -5,11 +5,12 @@ import PostItem from '../PostItem';
 class PostList extends Component {
   state = {
     posts: [
+      
       {
         id: 1,
         author: {
           name: "Julio Alcantara",
-          avatar: "http://url-da-imagem.com/imagem.jpg"
+          avatar: "https://robohash.org/23e9e630457b26bcecea8a996f2df4c3?set=set4&bgset=&size=400x400"
         },
         date: "04 Jun 2019",
         content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
@@ -18,17 +19,18 @@ class PostList extends Component {
             id: 2,
             author: {
               name: "Diego Fernandes",
-              avatar: "http://url-da-imagem.com/imagem.jpg"
+              avatar: "https://gravatar.com/avatar/23e9e630457b26bcecea8a996f2df4c3?s=400&d=mp&r=x"
             },
             content: "Conteúdo do comentário"
           }
         ]
       },
+
       {
         id: 1,
         author: {
           name: "Julio Alcantara",
-          avatar: "http://url-da-imagem.com/imagem.jpg"
+          avatar: "https://robohash.org/23e9e630457b26bcecea8a996f2df4c3?set=set4&bgset=&size=400x400"
         },
         date: "04 Jun 2019",
         content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
@@ -37,12 +39,13 @@ class PostList extends Component {
             id: 2,
             author: {
               name: "Diego Fernandes",
-              avatar: "http://url-da-imagem.com/imagem.jpg"
+              avatar: "https://gravatar.com/avatar/23e9e630457b26bcecea8a996f2df4c3?s=400&d=mp&r=x"
             },
             content: "Conteúdo do comentário"
           }
         ]
-      }
+      },
+
     ]
   };
 
@@ -50,7 +53,7 @@ class PostList extends Component {
     const { posts } = this.state;
 
     return (
-      <div>
+      <div className="postlist">
         {posts.map(post => (
           <PostItem key={post.id} {...post} />
         ))}
