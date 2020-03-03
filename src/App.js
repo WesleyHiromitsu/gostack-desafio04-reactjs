@@ -1,7 +1,13 @@
 import React from 'react';
 
+import Home from './pages/Home'
+
+import './App.css';
+
 function App() {
-  return <h1>Project Started</h1>
+  return (
+    <Home />
+  )
 }
 
 export default App;
